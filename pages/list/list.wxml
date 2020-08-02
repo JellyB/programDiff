@@ -1,0 +1,13 @@
+<view class="page-home">
+
+    <view class="title">选择哪一周</view>
+    <view class="home">
+        <block wx:for="{{items}}" wx:key="*this" wx:for-index="idx" wx:for-item="exam">
+            <view class="brand" bindtap="toRankPage" data-id="{{exam._id}}" data-index= "{{exam.index}}" data-date1="{{exam.date1}}" data-date2="{{exam.date2}}" data-num="{{exam.weekNum}}"> 
+                <view class="sortnum">{{exam.weekNum}}</view>
+                <view class="name">{{exam.date1}}-{{exam.date2}}</view>
+                <view class="arraw">></view>
+            </view>       
+        </block>
+    </view>
+</view>

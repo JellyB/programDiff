@@ -1,0 +1,41 @@
+<view class="page" style="width:{{windowWidth}}px;height:{{windowHeight}}px">
+
+    <view class="button">
+        <view class="{{daily ? 'btn selected' : 'btn'}}">
+            第{{weekNum}}周排行
+        </view>
+    </view>
+    <view class="body">
+
+        <view class="historys">
+            <view class="history">
+                <view class="num">排名</view>
+                <view class="tel">手机号</view>
+                <view class="score">分数</view>
+                <view class="ytimes">用时</view>
+            </view>
+            <scroll-view scroll-y="true" style="" >
+            <block wx:for="{{historys}}" wx:for-index="idx" wx:for-item="item">
+                <view class="history">
+                    <view class="num">{{idx+1}}</view>
+                    <view class="tel">{{item.tel}}</view>
+                    <view class="score">{{item.score}}</view>
+                    <view class="ytimes">{{item.ytimes}}</view>
+                </view>
+            </block>
+            </scroll-view>
+            <view class="bottom" style="height: 20rpx;padding: 10rpx 2rpx;margin:0 auto;">
+  
+            </view>
+        </view>
+
+
+    </view>
+
+ 
+    
+
+    <!-- <view class="footer">
+        <image src="/images/foot2.png" style="width:{{windowWidth}}px;"/>
+    </view> -->
+</view>
