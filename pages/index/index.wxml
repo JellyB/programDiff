@@ -1,12 +1,12 @@
-<view class="page" style="width:{{windowWidth}}px;height:{{windowHeight}}px">
+<view class="page">
 
     <view class="body">
-        <image class="img1" src="/images/img2020071501.jpg" />
+        <image class="img1" src="/images/img2020071501.png" />
 
         <view class="button" bindtap="examGo">
-            <image src="/images/img2020071502.jpg" />
             <text>点击开始</text>
         </view>
+        <text class="copyright">青岛市李沧区人大常委会<text>\n</text>青岛酒店管理职业技术学院</text>  
     </view>
 
 </view>

@@ -18,7 +18,6 @@ Page({
     })
     let that = this;
     this.setData({
-      id: options.id,
       weekNum: options.weekNum,
       date1: options.date1,
       date2: options.date2
@@ -97,7 +96,30 @@ Page({
   onShow: function () {
     this.getRankNum();
   },
-
+  dailyGo: function(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.setData({
+      daily: true,
+      total: false
+    },()=>{
+      this.onQuery();
+      this.getRankNum();
+    })
+  },
+  totalGo: function(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.setData({
+      daily: false,
+      total: true
+    },()=>{
+      this.onQuery2();
+      this.getSomeNum();
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -140,8 +162,7 @@ Page({
       data: {
         date1: this.data.date1,
         date2: this.data.date2,
-        weekNum: this.data.weekNum,
-        id: this.data.id
+        weekNum: this.data.weekNum
       }
     })
     .then(res=>{

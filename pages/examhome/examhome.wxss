@@ -20,18 +20,23 @@
 }
 
 .title {
-    font-size: 30rpx;
-    margin-left: 40rpx;
+    font-size: 35rpx;
+    margin-left: 0rpx;
+    font-weight: bold;
+    
 }
 
 .car {
-    font-size: 30rpx;
-    margin-left: 15rpx;
-    color: #a3a3a3;
+    font-size: 35rpx;
+    margin-left: 5rpx;
+
 }
 
-.blue {
-    color: #2ea6f2;
+.red {
+    color: #d01b1f;
+    font-weight: bold;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
 }
 
 .button {
@@ -56,14 +61,14 @@
 }
 
 button{
-    background-color: #f82809;
+    background-color: #d01b1f;
     color: #fff;
     border-radius: 0px;
     height: 55px;
 }
 .btn-area{
     height: 45px;
-    background: #f82809;
+    background: #d01b1f;
     width: 100%;
     position: fixed;
     left: 0;

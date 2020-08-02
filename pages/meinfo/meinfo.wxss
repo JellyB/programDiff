@@ -1,47 +1,69 @@
-@import "../../lib/weui.wxss";
-
-.page-section{
-  margin-bottom: 20rpx;
+page {
+  background-color: #ffffff;
+}
+.register{
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+  margin:40rpx 0rpx 70rpx 0rpx;
+}
+.image{
+  width: 220rpx;
+  height: 220rpx;
 }
 
-.page-body .btn-area{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.page-body .btn-area .button{
-    background-color: #1bcfad;
-    width: 375rpx;
-    border-radius: 20px;
-    padding: 5px 10px;
-    color: #fff;
-    text-align: center;
-}
-.page-body .title{
-  text-align: left;
-  padding: 10px
-}
-.page-body .input{
-  width: 90%;
-  text-align: left;
-  padding: 20px 10px;
-  margin: 10px 0;
-  background-color: #fff;
-  
-}
-.page-body .input .inputtitle{
-  padding: 10px 0;
-}
-.page-body .input .dept input{
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+.text{
+  font-size: 35rpx;
+  width: 480rpx;
+  margin: 0 auto;
+  margin-bottom: 25rpx;
 }
 
-.weui-cells__title{
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ededed;
+.inputFrame{
+  width: 440rpx;
+  height: 70rpx;
+  background-color: #eef7f6;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+.must{
+  width:25rpx;
+  color:red;
+  display:flex;
+  font-size: 30rpx;
+}
+
+.ensure{
+  font-size: 35rpx;
+  color: #ffffff;
+  text-align: center;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  width: 360rpx;
+  height: 80rpx;
+  background-color: #d01b1f;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.btn-area {
+  width: 200rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #d01b1f;
+  color: #ffffff;
+  border-radius: 16rpx;
+}
+
+.tip{
+  text-align: center;
+  margin-top: 25rpx;
+  font-size: 28rpx;
+}
+.remarks {
+  padding: 40rpx;
 }

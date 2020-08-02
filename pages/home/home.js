@@ -9,12 +9,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    notice: '在线答题小程序全新改版',
+    notice: '学习强国',
     i: [],
     name: [],
     shijian: [],
     tie: [],
-    datitimes: [],
+    datitimes: []
   },
 
   /**
@@ -175,13 +175,17 @@ Page({
     this.onGetTime();
     this.onQueryTime();
   },
+  tapWechat: function(){
+    wx.navigateTo({
+      url: '../wechat/wechat',
+    })
+  },
   onQueryTime: function(){
     db.collection('time').doc('001').get().then(res => {
       // res.data 包含该记录的数据
       console.log(res.data)
       // 调用函数时，传入new Date()参数，返回值是日期和时间
       var time = util.formatTime(new Date());
-
 
       // 再通过setData更改Page()里面的data，动态更新页面的数据
       this.setData({
@@ -249,6 +253,9 @@ Page({
           _openid: openid
         }).count();
         that.setData({
+          total: res.total,
+        })
+        that.setData({
           total: res.total
         })
         console.log(res);
@@ -301,21 +308,9 @@ Page({
     })
     .then(res => {
       console.log('[云函数] [getTime]: ', res)
-
-      let today = res.result.today;
-      let day = new Date(today);
-
-      let year = day.getFullYear();
-      let month = day.getMonth()+1;
-      let date = day.getDate();
-      let yearWeek = util.getYearWeek(year,month,date);
-      app.globalData.yearWeek = yearWeek;
-      console.log(year,month,date);
-      console.log('yearWeek',yearWeek);
       this.setData({
-        today,
-        time: res.result.time,
-        yearWeek: yearWeek
+        today: res.result.today,
+        time: res.result.time
       })
     })
     .catch((err)=>{

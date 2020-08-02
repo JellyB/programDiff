@@ -1,18 +1,24 @@
 <view class="page-info">
     <view class="header" bindtap="tapWechat">
-        <view class="avatar">
-            <image class="avatarimage" src="{{userInfo.avatarUrl}}"/>
+        
+        <image class="topImage" src="/images/topImage1.png"></image>  
+        <view class="info">
+            <view class="avatar">
+                <image class="avatarimage" src="{{userInfo.avatarUrl}}"/>
+            </view>
+            <view class="nickname">{{userInfo.nickName+" "}}</view>   
         </view>
-        <view class="nickname">{{userInfo.nickName+" "}}</view>
+          
+              
     </view>
 
     <view class="menus">
         <view class="menu" bindtap="infoGo" >
             <view class="left">
-            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="http://file.xiaomutong.com.cn/tpl.png"></image>
-            <text class="title">个人信息</text>
+            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="/images/icon_center_tj.png"></image>
+            <button class="title">个人信息</button>
             </view>
-            <view class="arraw">></view>
+            <view class="arraw"></view>
         </view>  
  
     </view>
@@ -20,18 +26,19 @@
     <view class="menus">
         <view class="menu" bindtap="goShare" >
             <view class="left">
-            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="http://file.xiaomutong.com.cn/share20200502.png"></image>
-            <button openType="share">分享好友</button>
+            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="/images/icon_center_phone.png"></image>
+            <button openType="share" class="title">分享好友</button>
             </view>
-            <view class="arraw">></view>
+            <view class="arraw"></view>
         </view>  
-                  
+    </view>  
+    <view class="menus">            
         <view class="menu" bindtap="bindgoabout" >
             <view class="left">
-            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="http://file.xiaomutong.com.cn/aboutme3.png"></image>
-            <text class="title">关于我们</text>
+            <image class="icon" style="background-color: #fff;" mode="aspectFill" src="/images/icon_center_msg.png"></image>
+            <button class="title">关于我们</button>
             </view>
-            <view class="arraw">></view>
+            <view class="arraw"></view>
         </view>  
     </view>
 

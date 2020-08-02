@@ -1,8 +1,10 @@
 /* miniprogram/pages/home/home.wxss */
 .page{
     background-size: 100% auto;
-    background-color: #fef8ea;
-    padding-top: 120rpx;
+    /*background-color: #d01b1f;*/
+    background: -webkit-linear-gradient(top,#d01b1f,#f12227,#d01b1f);
+    height: calc(100vh);
+    overflow: hidden;
 }
 .page .footer{
     z-index: 1;
@@ -13,7 +15,7 @@
     z-index: 1;
 }
 .page .body{
-    padding-top: 80rpx;
+    padding-top: 000rpx;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -22,8 +24,8 @@
 }
 
 .page .body .img1{
-    width: 640rpx;
-    height: 412rpx;
+    width: 700rpx;
+    height: 750rpx;
 }
 
 .page .body .img2{
@@ -41,21 +43,31 @@
 
 
 .page .body .button{
-    z-index: 9;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 35rpx;
+    color: #ffffff;
+    text-align: center;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    width: 300rpx;
+    height: 70rpx;
+    background-color: #ffa726;
+    font-weight: bold;
+    margin: 0 auto;
     margin-top: 50rpx;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
 }
 .page .body .button image{
-    width: 150rpx;
-    height: 150rpx;
+    margin-top: 200rpx;
+    width: 210rpx;
+    height: 60rpx;
 }
 .page .body .button text{
-    color: #f82809;
+    color: #d01b1f;
+    font-size: 36rpx;
 }
+
 .page .body .button .btn1{
     width: 150rpx;
     padding: 10rpx 30rpx;
@@ -125,3 +137,15 @@
     align-items: center;
     
 }
+.copyright {
+    margin-top: 50rpx;
+    position: fixed;
+    font-size: 30rpx;
+    color: #ffd189;
+    bottom: 70rpx;
+    left: 0;
+    right: 0;
+    padding: 30rpx;
+    text-align: center;
+    /*background-color: #d01b1f;*/
+  }

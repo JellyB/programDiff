@@ -9,7 +9,8 @@ Page({
     index: 0,
     focus: false,
     tel: '',
-    name: ''
+    name: '',
+//    dept:''
     },
   bindNameInput: function (e) {
     this.setData({
@@ -23,6 +24,14 @@ Page({
       tel: e.detail.value
     },()=>{
       console.log(this.data.tel)
+    })
+  },
+  /*增加单位信息++++++++*/
+  bindDeptInput: function (e) {
+    this.setData({
+      dept: e.detail.value
+    },()=>{
+      console.log(this.data.dept)
     })
   },
 
@@ -42,7 +51,9 @@ Page({
 
     this.setData({
       name: app.globalData.userInfo['name'] || '',
-      tel: app.globalData.userInfo['tel'] || ''
+      tel: app.globalData.userInfo['tel'] || '',
+      dept: app.globalData['dept'] || ''
+
     })
   },
   onQueryDepts: function(){

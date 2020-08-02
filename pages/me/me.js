@@ -73,12 +73,19 @@ Page({
       url: url
     })
   },
-  bindgoabout: function(){
-    let url = '/pages/about/about';
-    wx.navigateTo({
-      url: url
+  bindgoabout() {
+    wx.showModal({
+      title: '关于我们',
+      content: '本活动由青岛市李沧区人大常委会联合青岛酒店管理职业技术学院举办，最终解释权归青岛市李沧区人大常委会所有。',
+      showCancel: false
     })
   },
+  // bindgoabout: function(){
+  //   let url = '/pages/about/about';
+  //   wx.navigateTo({
+  //     url: url
+  //   })
+  // },
   infoGo: function(){
     let url = '/pages/meinfo/meinfo';
     wx.navigateTo({
@@ -151,9 +158,9 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: "这份题咋这么难？！不信你看",
+      title: "学法典/爱生活，一起来挑战吧！",
       path: "pages/index/index?openid="+app.globalData.openid+'&uuid='+this.data.uuid,
-      imageUrl: "http://file.xiaomutong.com.cn/img2020071501.jpg"
+      /*imageUrl: "http://file.xiaomutong.com.cn/img2020071501.jpg"*/
     };
   },
   tapWechat: function(){

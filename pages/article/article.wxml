@@ -1,4 +1,9 @@
-<view class="body">
+
+<view class="topBG">
+    <image class="topImage" src="/images/topImage.png"></image>
+</view>    
+
+    <view class="body">
     <view class="page-swiper">
       
     </view>
@@ -11,3 +16,11 @@
         </view>
     </view>
 </view>
+
+<!--
+<view class="page-about">
+    <view class="title">规则说明</view>
+    <view class="desc">规则说明</view>
+   
+</view>
+-->

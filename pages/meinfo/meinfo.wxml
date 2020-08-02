@@ -1,3 +1,32 @@
+<!--pages/register/index.wxml-->
+<view class="page">
+  <view class='register'>
+    <image class='image' src='../../images/register.png'></image>
+  </view> 
+  <form bindsubmit="register" report-submit='true'>
+      <view class="inputFrame">
+        <view class="must"> * </view>
+        <input class="weui-input" auto-focus placeholder="姓名" bindinput="bindNameInput" value="{{name}}"/>
+      </view>  
+
+
+      <view class="inputFrame">
+        <view class="must"> * </view>
+        <input class="weui-input" placeholder="电话" bindinput="bindTelInput" value="{{tel}}"/>
+      </view>
+
+      <view class="inputFrame">
+        <view class="must"> * </view>
+        <input class="weui-input" placeholder="单位" bindinput="bindDeptInput" value="{{dept}}"/>
+      </view>
+
+      <!--<view class="btn-area" bindtap='goOk'>确定</view>-->
+      <view class='tip'>仅作奖品发放使用，一经审核通过不可修改</view>
+    </form>
+</view>
+
+
+<!--  
 <view class="page-body">
   
     <view class="page__bd">
@@ -16,9 +45,10 @@
         </view>
 
     </view>
-<!--     
+   
     <view class="btn-area">
         <view class="button" bindtap='goOk'>确定</view>
-    </view> -->
+    </view> 
   
 </view>
+-->

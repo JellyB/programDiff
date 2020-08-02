@@ -1,11 +1,24 @@
+<view class="topBG">
+    <image class="topImage" src="/images/topImage.png"></image>
+    
+</view>    
+
 <view class="page-history">
-    <view class="title">您参与的挑战记录如下</view>
     <view class="historys">
+        <view class="history-title">
+            <text>序号</text>
+            <text>分数</text>
+            <text>用时</text>
+            <text>答题日期及时间</text>
+        </view>
         <block wx:for="{{items}}" wx:key="id" wx:for-index="idx" wx:for-item="item">
-            <view class="history" data-id="{{item._id}}">
-                <view class="sortnum">{{idx+1}}</view>
-                <view class="name">{{item.time1}}-{{item.score}}分</view>
-                <view class="arraw"></view>
+            <view class="list" data-id="{{item._id}}">
+                <text>{{idx+1}}</text>
+              
+            <text class="colororange">{{item.score}}<text class="span">分</text></text>
+            <text class="colororange">{{item.duration}}<text class="span"></text></text>
+              
+            <text>{{item.time1}}</text>
             </view>       
         </block>
     </view>

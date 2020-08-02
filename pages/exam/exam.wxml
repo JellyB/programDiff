@@ -2,18 +2,31 @@
 <view class="page" style="width:{{windowWidth}}px;height:{{windowHeight}}px">
 
     <view class="body">
-        <view class="image">
-            <view class="typename">
-                <view class="value">{{question.typename}}</view>
+        <!----
+            <view class="image">
+                <view class="typename">
+                    <view class="value">{{question.typename}}</view>
+                </view>
+                
             </view>
             
-        </view>
+        <view class="message">{{currentIndex+1}}/{{num}}（共{{num}}题）</view>
+        ---->
+        <view class="message">第{{currentIndex+1}}题/共{{num}}题</view>
         <view class="message">
-        <view class="sort">{{currentIndex+1}}/{{num}}（共{{num}}题）</view>
-        <view class="time"><text> 倒计时: {{timenum}}</text></view>
+            
+            <view class="time">
+                <image src="/images/nav_icon_time@2x.png"></image>
+                <text> 倒计时:<text class="red"> {{timenum}}</text></text>
+            </view>
         </view>
         <view class="question">
-            <view class="title">{{question.title}}</view>
+            <view class="title">
+                <view class="type">{{question.typename}}</view>
+                {{question.title}}
+                  
+            
+            </view>
             <view class="options">
                 <block wx:for="{{question.options}}" wx:for-index="idx" wx:for-item="option">
                     <!--

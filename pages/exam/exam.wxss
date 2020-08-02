@@ -1,9 +1,9 @@
 /* miniprogram/pages/exam/exam.wxss */
 .page{
     position: relative;
-    background-color: #fef8ea;
+    background-color: #f6f6f6;
     background-size: 100% auto; 
-    padding-top: 250rpx;
+    /* padding-top: 250rpx; */
 }
 .page .footer{
     z-index: 1;
@@ -19,10 +19,9 @@
 }
 
 .page .body{
-    width: 700rpx;
     margin: 0 auto;
     background: #fff;
-    padding: 50rpx 10rpx;
+    padding: 50rpx 40rpx;
 }
 
 .page .body .image{
@@ -44,19 +43,27 @@
 }
 
 .page .body .image .value{
-    color: #fff;
+    color: #f1e2e2;
 }
 
-.page .body .question{
-    padding: 0 20rpx;
-}
 
+.page .body .question .type{
+    float: left;
+    padding: 2rpx 4rpx;
+    background-color: #d01b1f;
+    color: #f6f6f6;
+    width: 80rpx;
+    text-align: center;
+    font-size: 24rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+    margin-top: 6rpx;
+    line-height: 40rpx;
+    border-radius: 6rpx;
+    font-weight:bold;
+}
 .page .body .question .title{
     padding: 20rpx 0;
-}
-
-.page .body .question .options{
-
 }
 
 .page .body .question .options .option{
@@ -67,32 +74,36 @@
     align-items: center;
     color: #333;
     font-size: 28rpx;
-    padding: 10rpx 10rpx 0;
-    margin-bottom: 25rpx;
-    line-height: 1.5;
+    padding: 10rpx 10rpx;
+    margin-bottom: 20rpx;
+    padding-right: 40rpx;
+    margin-right: 10rpx;
     cursor: pointer;
-    border: 2rpx solid #bfbfbf;
+    background-color: #fff;
     
 }
-.page .body .question .options .selected{
-    border: 2rpx solid #f82809;
-    color: #fff;
-    background: #f82809;
+.page .body .question .options .option:nth-child(2n) {
+    background-color: #f6f6f6;
+}
+.page .body .question .options:nth-child(2n) .selected{
+    border: 2rpx solid #d01b1f;
+    color: #f1e2e2;
+    background: #d01b1f;
 }
 .page .body .question .options .green{
     color: #34a30a;
     border: 2rpx solid #34a30a;
     border-left: 10rpx solid #34a30a;
-    background-image:url("http://file.xiaomutong.com.cn/20200701/true.png");
+    /*background-image:url("http://file.xiaomutong.com.cn/20200701/true.png");*/
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 30rpx;
 }
 .page .body .question .options .red{
-    color: #f82809;
-    border: 2rpx solid #f82809;
-    border-left: 10rpx solid #f82809;
-    background-image:url("http://file.xiaomutong.com.cn/20200701/false.png");
+    color: #d01b1f;
+    border: 2rpx solid #d01b1f;
+    border-left: 10rpx solid #d01b1f;
+    /*background-image:url("http://file.xiaomutong.com.cn/20200701/false.png");*/
     background-repeat: no-repeat;
     background-position: right center;
     background-size: auto 30rpx;
@@ -103,31 +114,57 @@
 }
 .page .body .btn-area .button{
     z-index: 99;
-    background: #f82809;
-    box-shadow: 2rpx 2rpx 6rpx #f82809;
+    background: #d01b1f;
+    box-shadow: 2rpx 2rpx 6rpx #d01b1f;
     border-radius: 3rpx;
     text-align: center;
-    font-size: 25rpx;
-    color: #fff;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #f1e2e2;
     padding: 20rpx 0;
 
 }
 
 .page .message{
     padding-left: 20rpx;
-    color: #f82809;
+    font-weight: bold;
+    color: #d01b1f;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+    background-color: #f6f6f6;
+}
+.page .message image {
+    width: 15px;
+    height: 15px;
+    margin-right: 10rpx;
+}
+.page .message .time{
+    display: flex;
+    font-weight: bold;
+    color: #656565;
+    font-size: 16px;
+    margin: 0 auto;
+    height: 80rpx;
+    width: 35%;
+    line-height: 80rpx;
+    text-align: center;
+    align-items: center;
+}
+.page .message .red {
+    color: #d01b1f;
+    font-weight: bold;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
 }
 .page .modal{
     /* background: url(http://file.xiaomutong.com.cn/img202006201500.png) no-repeat center top; */
     z-index: 99;
-    border: 1px solid #f82809;
-    box-shadow: 1px 1px 3px #f82809;
-    background-color: #fef8ea;
+    border: 1px solid #d01b1f;
+    box-shadow: 1px 1px 3px #d01b1f;
+    background-color: #f6f6f6;
     background-size: 100% auto; 
     position: absolute;
     top: 50%;
@@ -154,8 +191,8 @@
     z-index: 99;
     width: 200rpx;
     height: 95rpx;
-    background-color: #f82809;
-    color: #fff;
+    background-color: #d01b1f;
+    color: #f1e2e2;
     text-align: center;
     border-radius: 12rpx;
     display: flex;
@@ -170,8 +207,8 @@
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: #f82809;
-    color: #fff;
+    background-color: #d01b1f;
+    color: #f1e2e2;
     font-size: 16px;
     font-weight: normal;
     padding: 0;

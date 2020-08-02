@@ -12,10 +12,10 @@ Page({
     showModal: false,
     showShareButton: true,
     score: 0,
-    times: "30:00",
+    times: "05:59:59",
     maxScore: 0,
     total: 0,
-    timenum: 20
+    timenum: 30
   },
   questions: [],
 
@@ -215,29 +215,21 @@ Page({
         if(!question.status){
           
           setTimeout( async ()=>{
-            wx.showToast({
-              title: '挑战失败',
-              mask: true,
-              icon: 'success',
-              duration: 2000,
-              complete: function(){
+           
+            let questions = that.questions;
 
-                let questions = that.questions;
-
-                let unitMap = that.data.unitMap;
-            
-                let score = 0;
-                questions.forEach(ques => {
-                  if(ques.status){
-                    score += unitMap[ques.typecode];
-                  }
-                })
-
-                that.setData({
-                  score,
-                  showModal: true
-                })
+            let unitMap = that.data.unitMap;
+        
+            let score = 0;
+            questions.forEach(ques => {
+              if(ques.status){
+                score += unitMap[ques.typecode];
               }
+            })
+
+            that.setData({
+              score,
+              showModal: true
             })
 
             const db = wx.cloud.database()
@@ -285,7 +277,7 @@ Page({
 
   },
   doNext: function(){
-    let timenum = 20;
+    let timenum = 30;//第一题后答题秒数 
 
     let currentIndex = this.data.currentIndex;
     let questions = this.questions;
@@ -342,7 +334,7 @@ Page({
         tel,
         branch,
         today: this.data.today,
-        weekNum: app.globalData.yearWeek,
+        weekNum: this.data.weekNum,
         time1,
         time2,
         ytimes: this.data.ytimes
@@ -400,7 +392,7 @@ Page({
         tel,
         branch,
         today: this.data.today,
-        weekNum: app.globalData.yearWeek,
+        weekNum: this.data.weekNum,
         time1,
         time2,
         ytimes: ytimes
@@ -419,15 +411,17 @@ Page({
     })
 
   },
-  overGo: function(){
+  overGo: util.debounce(function(){
+    
+    this.setData({
+      showModal: false
+    })
+    wx.navigateBack({
+      delta: 100
+    })
     this.addHistory()
-    setTimeout(()=>{
-      wx.navigateBack({
-        delta: 100
-      })
-    },1000)
-
-  },
+  }, 600),
+  
   rankGo: function(){
     console.log('003');
     let url = '../rank/rank';
@@ -515,9 +509,9 @@ Page({
     }
 
     return {
-      title: "这份题咋这么难？！不信你看",
-      path: "pages/index/index?openid="+app.globalData.openid+'&uuid='+this.data.uuid,
-      imageUrl: "http://file.xiaomutong.com.cn/img2020071501.jpg"
+        title: "学法典/爱生活，一起来挑战吧！", 
+        path: "pages/index/index?openid="+app.globalData.openid+'&uuid='+this.data.uuid,
+        /*imageUrl: "http://file.xiaomutong.com.cn/img2020071501.jpg"*/
     };
   },
   onGetTime: function() {
@@ -584,7 +578,7 @@ Page({
     db.collection('daily')
     .where({
       _openid: openid,
-      weekNum: app.globalData.yearWeek
+      weekNum: app.globalData.weekNum
     })
     .get()
     .then((res)=>{

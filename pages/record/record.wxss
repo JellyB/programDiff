@@ -37,7 +37,7 @@
     text-align: left;
 }
 .page-history .historys .history .sortnum{
-    background-color: #1bcfad;
+    background-color: #d01b1f;
     color: #fff;
     border-radius: 50%;
     width: 20px;
@@ -54,6 +54,25 @@
     padding-right: 5px;
     color: #B2B2B2;
     text-align: right;
+    position: relative;
+}
+.page-info .menu .arraw:after{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 2px;
+
 }
 /* 外层组件的宽度可设置成100%或具体数值 */
 .page-history .adContainer {

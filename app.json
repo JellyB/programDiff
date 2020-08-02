@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/home/home",
     "pages/addFunction/addFunction",
@@ -22,13 +23,13 @@
   "window": {
     "backgroundColor": "#fef8ea",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fef8ea",
-    "navigationBarTitleText": "党建答题助手",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#d01b1f",
+    "navigationBarTitleText": "李沧区民法典知识竞赛",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#bfbfbf",
-    "selectedColor": "#1bd0ad",
+    "selectedColor": "#d01b1f",
     "backgroundColor": "#FFFFFF",
     "list": [
       {

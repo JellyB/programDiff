@@ -5,7 +5,7 @@
             <view class="history" data-id="{{item._id}}">
                 <view class="sortnum">{{idx+1}}</view>
                 <view class="name">{{item.time}}</view>
-                <view class="arraw">></view>
+                <view class="arraw"></view>
             </view>       
         </block>
     </view>

@@ -1,39 +1,45 @@
 
 <view class='body'>
+    <view class="topBG">
+        <image class="topImage" src="/images/topImage.png"></image>
+		</view>		
+	<!--
 	<i-notice-bar icon="systemprompt" loop speed="2000">
 	{{notice}}
 	</i-notice-bar>
-
+-->
 	<view class='topbar-view'>
 
 		<view class='select-container'>
 			<view class='select-container-left'>
-				<view class='left-borrow' bindtap='examGo'>
+				<view class='left-borrow bar-item' bindtap='examGo'>
 					<text class='select-text1'>挑战答题</text>
-					<image src='../../images/left-borrow-img.png'></image>
+					<image class="image" src='../../images/icon3.png'></image>
 				</view>
-				<view class='left-introduce' bindtap='historyGo'>
+				<view class='left-introduce bar-item' bindtap='historyGo'>
 					<text class='select-text2'>答题记录 </text>
+					<image class="image" src='../../images/icon2.png'></image>
 				</view>
+				<!--复活记录
 				<view class='left-open'  bindtap='recordGo'>
 					<text class='select-text2'>复活记录</text>
 				</view>
+				-->
 			</view>
 			<view class='select-container-right'>
-				<view class='right-sao' bindtap='rankGo'>
+				<view class='right-sao bar-item' bindtap='rankGo'>
 					<text class='select-text2'>答题排行</text>
-					<image src='../../images/right-sao-img.png'></image>
+					<image class="image" src='../../images/icon1.png'></image>
 				</view>
-				<view class='right-record' bindtap='articleGo'>
+				<view class='right-record bar-item' bindtap='articleGo'>
 					<text class='select-text1'>活动方案</text>
-
+					<image class="image" src='../../images/icon4.png'></image>
 				</view>
-				<!-- <view class='right-question' bindtap='recordGo'>
+				<!----
+				<view class='right-question' bindtap='recordGo'>
 					<text class='select-text2'>复活记录</text>
-				</view> -->
-				<!-- <view class='right-question1' bindtap='aboutGo'>
-					<text class='select-text2'>关于我们</text>
-				</view> -->
+				</view>
+				---->
 			</view>
 		</view>
 	</view>

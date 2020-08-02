@@ -1,8 +1,8 @@
 <view class="page">
     <view class="wrap">
         <view>
-            <text class="title">考试题目</text>
-            <text class="car">{{name}}</text>
+            <text class="title">活动名称:</text>
+            <text class="red">{{name}}</text>
         </view>
         <!-- <view>
             <text class="title">考题数量</text>
@@ -10,21 +10,23 @@
                 <text class="blue">{{num}}</text>题目</text>
         </view> -->
         <view>
-            <text class="title">单题时间</text>
-            <text class="car">
-                <text class="blue">{{20}}</text>秒</text>
+            <text class="title">答题限时:</text>
+            <text class="car">每题{{time}}秒</text>
+                <!--
+                <text class="blue">每题{{time}}</text>秒</text>
+                -->
         </view>
         <!-- <view>
             <text class="title">合格标准</text>
             <text class="car">满分<text class="blue">{{total}}</text>分, <text class="blue">{{passf}}</text>分及格, </text>
         </view> -->
         <view>
-            <text class="title">出题规则</text>
-            <text class="car">按规定比例随机抽取</text>
+            <text class="title">出题方式:</text>
+            <text class="car">题库随机抽取</text>
         </view>
         <view>
-            <text class="title">备注事项</text>
-            <text class="car">每人每天有3次答题机会，每题20秒，取最高分为当日有效得分！</text>
+            <text class="title">规则简介:</text>
+            <text class="car">每人每天有<text class="red">3</text>次答题机会，每题<text class="red">30</text>秒，每次答题可分享复活<text class="red">1</text>次，答题结束点击<text class="red">“结束本局”</text>按钮提交答题记录！</text>
         </view>
         <view class="btn-area" bindtap="defaultGo">
         <text >马上进入</text>

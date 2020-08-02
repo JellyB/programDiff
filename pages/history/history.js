@@ -24,6 +24,16 @@ Page({
     .get()
     .then(res=>{
       console.log('[数据库] [查询记录] 成功: ', res);
+      res.data.forEach(item => {
+        let difftime = (new Date(item.time2) - new Date(item.time1))/1000; //计算时间差,并把毫秒转换成秒
+        difftime = Math.abs(difftime);
+    
+        let minutes = parseInt(difftime%3600/60); // 分钟 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
+   	    let seconds = parseInt(difftime%60);  // 以60秒为一整份 取余 剩下秒数
+     
+        let duration = minutes+':'+seconds;
+        item.duration = duration
+      })
       let items = res.data;
       
       this.setData({
@@ -38,6 +48,14 @@ Page({
       })
       
     })
+  },
+  transformTime:function (S) {
+
+    var T = new Date(1E3 * S),
+    Format = function(Q){return Q < 10 ? '0' + Q : Q},
+    Result = Format(T.getHours()) + ':' + Format(T.getMinutes());
+    return Result
+
   },
   toReviewPage: function(e){
     console.log(e.currentTarget.dataset.id);
