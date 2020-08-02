@@ -18,6 +18,7 @@ Page({
     })
     let that = this;
     this.setData({
+      id: options.id,
       weekNum: options.weekNum,
       date1: options.date1,
       date2: options.date2
@@ -162,7 +163,8 @@ Page({
       data: {
         date1: this.data.date1,
         date2: this.data.date2,
-        weekNum: this.data.weekNum
+        weekNum: this.data.weekNum,
+        id: this.data.id
       }
     })
     .then(res=>{

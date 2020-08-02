@@ -308,9 +308,21 @@ Page({
     })
     .then(res => {
       console.log('[云函数] [getTime]: ', res)
+
+      let today = res.result.today;
+      let day = new Date(today);
+
+      let year = day.getFullYear();
+      let month = day.getMonth()+1;
+      let date = day.getDate();
+      let yearWeek = util.getYearWeek(year,month,date);
+      app.globalData.yearWeek = yearWeek;
+      console.log(year,month,date);
+      console.log('yearWeek',yearWeek);
       this.setData({
-        today: res.result.today,
-        time: res.result.time
+        today,
+        time: res.result.time,
+        yearWeek: yearWeek
       })
     })
     .catch((err)=>{

@@ -69,12 +69,13 @@ Page({
   },
   toRankPage: function(e){
     console.log(e.currentTarget.dataset.id);
+    let id = e.currentTarget.dataset.id;
     let date1 = e.currentTarget.dataset.date1;
     let date2 = e.currentTarget.dataset.date2;
 
     let weekNum = e.currentTarget.dataset.num;
   
-    let url = '../rank/rank?date1='+date1+'&date2='+date2+'&weekNum=' + weekNum;
+    let url = '../rank/rank?id='+id+'&date1='+date1+'&date2='+date2+'&weekNum=' + weekNum;
     wx.navigateTo({
       url: url
     })

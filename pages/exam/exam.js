@@ -334,7 +334,7 @@ Page({
         tel,
         branch,
         today: this.data.today,
-        weekNum: this.data.weekNum,
+        weekNum: app.globalData.yearWeek,
         time1,
         time2,
         ytimes: this.data.ytimes
@@ -392,7 +392,7 @@ Page({
         tel,
         branch,
         today: this.data.today,
-        weekNum: this.data.weekNum,
+        weekNum: app.globalData.yearWeek,
         time1,
         time2,
         ytimes: ytimes
@@ -578,7 +578,7 @@ Page({
     db.collection('daily')
     .where({
       _openid: openid,
-      weekNum: app.globalData.weekNum
+      weekNum: app.globalData.yearWeek
     })
     .get()
     .then((res)=>{
